@@ -1,0 +1,28 @@
+problem 1 :
+
+build a linked list and implement the following methods 
+1) insertFirst
+2) insertLast
+3) deleteFirst
+4) deleteLast
+5) indexOf
+
+
+
+Solution 
+1)   this.head = new Node(data, this.head);
+    this.size++;
+    in a linked list the head is always linked t the first element.
+    So to insert an element as the last element i make the element as the
+    head an shift the rest of the elements as the next
+
+2)  if there is no element in the linked list i insert it as the first element
+    else i loop through the list and place the element at the last place and increase the 
+    size by one
+
+3)  i check if the size of the list is greater than 0 and if it is i equate the next as the
+    head and reduce the size by one
+  
+4)  i check if the size of the list is greater than 1 then i loop through the list for each
+    value of i form i equals 1 to i equals size -1 to get the second to the last item the i
+    set the next value to null
