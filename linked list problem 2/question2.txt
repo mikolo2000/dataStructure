@@ -1,0 +1,39 @@
+problem 2:
+
+add the following methods to the linked list class u created
+
+1)insertAtIndex()
+2)deleteIndex()
+3)makeArray() that is use the linkedlist items to make an makeArray
+4)reverse() that is the list should start from the last to the first
+5)KthNodeFromTheEnd() 
+
+
+solution:
+1)    this method takes two arguments the data to be imputed and the index to input it. 
+      i first check if the index is a valid index then i check if the index is between 0
+      and the size of the list. if the index = 0 i use the insertFirst() method to insert
+      it at the head and shit the position of others.
+      if the index is greater than zero but valid. i loop through the list to the value before
+      the index and copy the next node. i use a new node to pass in the data at the index 
+      then input the copied value as the next property of the new node. then i increase the size
+      by one.
+      
+2)    i first check if the index is a valid index then i check if the index is between 0
+      and the size of the list. if the index = 0 i use the deleteFirst() method to delete
+      it at the head and shit the position of others.
+      if the index is greater than zero but valid. i loop through the list to the value before
+      the index and copy the next node. i pass the next item of the node i copied to the next of 
+      the node before index to delete so as to remove the data with the given index. then i reduce
+      the size by one.
+
+3)    i declear an empty array. then i looped through the linked list pushing the value of each of 
+      item in the list into the array. then return the array.
+
+4)    i use the makeArray() method to create an array with the linkedlist datas. use the forEach loop
+      to insert each of the items in the array in the linked list through the insertFirst() method.
+
+5)    i decleared two variables and equate the to the head, i use the for on variable a to loop to 
+      create a distance of k-1 between the two variable . then i used a while loop to move a and 
+      b trying to equate a to the last item in the list. which implies the data in the position in 
+      which b is in is the data we a looking for. 

@@ -28,7 +28,7 @@ class LinkedList {
       this.size++;
     }
   }
-  insertIndex(data, index) {
+  insertAtIndex(data, index) {
     if (index >= this.size || index < 0 || typeof index !== "number") {
       return;
     } else if (index === 0) {
@@ -105,38 +105,32 @@ class LinkedList {
   }else {
     return;
   }
-}
-reverse(){
-  const array = this.makeArray();
-  this.head = null;
-  this.size = 0;
-  array.forEach(element=>{
-    this.insertFirst(element);
-  })
-}
-printListData() {
-  let currentData = this.head;
-  while (currentData) {
-    console.log(currentData.data);
-    currentData = currentData.next;
   }
-}
-makeArray(){
-  let array = [];
-  let current = this.head;
-  while(current){
-    array.push(current.data);
-    current=current.next;
+  reverse(){
+    const array = this.makeArray();
+    this.head = null;
+    this.size = 0;
+    array.forEach(element=>{
+      this.insertFirst(element);
+    })
   }
-  return array;
-}
-printListData() {
+  printListData() {
     let currentData = this.head;
     while (currentData) {
       console.log(currentData.data);
       currentData = currentData.next;
     }
   }
+  makeArray(){
+    let array = [];
+    let current = this.head;
+    while(current){
+      array.push(current.data);
+      current=current.next;
+    }
+    return array;
+  }
+
 }
 
 const n1 = new Node(100);
