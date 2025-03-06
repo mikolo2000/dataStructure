@@ -1,0 +1,27 @@
+question :
+Build a hash table from scratch. Use linear probing strategy for
+handling collisions. Implement the following operations:
+- put(int, String)
+- get(int)
+- remove(int)
+- size()
+
+
+solution: first i built a HashTable class that takes in an integer as the size an use the size to build an array
+          i create a function in the class to validate integers. 
+
+          in implementing the put() method i validate the input if they are the required types, then i check if the 
+          inputed key is already existed. if it existed i use the find method to find the data change its value .
+          if the key does not exist in the bucket, i check if the bucket is full. if the buckets are filled i return 
+          and log buckets are filled. if the buckets are not filled i use the linear probing method to hash the key 
+          i use a while loop so that if there is a collisions the linear probing method moves the data to the next 
+          avialable index.
+
+          in implementing the get method. the method receives a key. i first validate the received key then use the 
+          array. find method to loop through the buckets to get the required data.
+
+          in implementing the remove method . i validate the key first, use the findIndex method to get the position 
+          of the data the set the value of that index to 0.
+
+          in implementing the size () method i just return this.size 
+

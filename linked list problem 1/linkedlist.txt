@@ -25,4 +25,9 @@ Solution
   
 4)  i check if the size of the list is greater than 1 then i loop through the list for each
     value of i form i equals 1 to i equals size -1 to get the second to the last item the i
-    set the next value to null
+    set the next value to null and reduce the size by 1
+
+5) to get the index of a particular data i loop through the list to check if the data is there 
+    i start the index from 0 if the given data matches any data in the list it in returns the 
+    value of index else it returns -1
+    

@@ -1,0 +1,34 @@
+question:- source:- codewithmosh
+
+1- Extend the Array class and add a new method to return the largest
+number. What is the runtime complexity of this method?
+Solution: Array.max()
+2- Extend the Array class and add a method to return the common items
+in this array and another array.
+Solution: Array.intersect()
+3- Extend the Array class and add a method to reverse the array. For
+example, if the array includes [1, 2, 3, 4], after reversing and printing it,
+we should see [4, 3, 2, 1].
+Solution: Array.reverse()
+4- Extend the Array class and add a new method to insert an item at a
+given index:
+public void insertAt(int item, int index)
+Solution: Array.insertAt()
+
+
+
+
+solutions:
+
+1) in building the max() method i used the array.reduce() method to reduce the array to its maximum;
+2) the intersect method receives an array of items as argument. i decleared a constant result as an 
+    empty array, i used the forEach method to loop through each item in the custom array. for each item 
+    i use the find method to check for a match in the given array if a match is found i push the matched 
+    item into the array. then return the result.
+3)  in the reverse method i decleared a constant reverse and set it to an empty array,then i used the for 
+    loop to push the elements of the custom array backwards int the reverse array and set this.array to 
+    reverse 
+
+4) the insertAt() method receives two arguments, the index and the value,i checked if the index was valid. then
+  i used the splice() method to add the value at the given index
+    

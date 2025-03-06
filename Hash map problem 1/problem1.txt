@@ -1,0 +1,25 @@
+Question: Build a Hash table class, in this class you should have a put(key, value) which takes 
+a key value pair, a get(key) method which takes in a key and returns the key value pair with the 
+given key and remove(key) which gets a key and removes its corresponding value from the table.
+
+
+solution:
+
+  first i copied the linkedlist list class i created from the previous problem.
+  i created a HashTable class which takes in an integer as its size and use the
+  size to represent the number of buckets and set each buckets to a linkedlist.
+
+  to create the put method i created a hash function in the class then use the hash function to
+  hash the key and get an index to put the key value pair. i check if the key existed , if it existed i use 
+  the indexOf method in the linked list to find the postion in the linkedlist. i loop to the position , copy 
+  the next data then set the current node to a new node with data property set as the key value pair and the next 
+  property i set to the copied data. And if the key does not exist in the table I use the inputLast method 
+  in the linkedlist to put the value in the bucket with the given index
+
+  in the get method i hashed the given key to get its index so as to find its bucket . i used the makeArray()
+  method in the linkedlist to make an array of the items in the bucket and i use the array.find method to look 
+  for the value with the given key. if the value is found it returns the given value.
+
+  in the remove method i first hash the function to get its' index then i used the get method i created earlier
+  to get its value pair . then i used the indexOf method to know the index of the item in the linkedlist . i then used 
+  used the deleteIndex() method to remove the item from the hash table;

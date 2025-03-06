@@ -1,3 +1,62 @@
+
+class HashTable{
+  constructor(size){
+    if(!Number.isInteger(size)){
+      throw new TypeError("Size must be an Integer");
+    }
+    this.size = size;
+    this.bucket = new Array(size);
+    for(let i = 0; i <size; i++){
+      this.bucket[i]= new LinkedList();
+    }
+
+  }
+
+  hash(key){
+    let hash =0;
+  for (let i = 0; i < key.length; i++) {
+    hash= hash+ key.charCodeAt(i);
+  }
+  return hash % this.size;
+  }
+
+  put(key, value){
+    let index = this.hash(key);
+    const array = this.bucket[index].makeArray();
+    const existed = array.find(e=> e.key===key);
+    const linkedListIndex = this.bucket[index].indexOf(existed);
+    let current= this.bucket[index]
+    
+    if(existed){
+      for (let i = 0; i < linkedListIndex; i++) {
+        current=current.next;
+      }
+      let copied = current.next;
+      current = new Node({key,value}, copied); 
+    }else{
+      this.bucket[index].insertLast({key, value});
+    }
+    
+  }
+  get(key){
+    let index = this.hash(key);
+    const indexArray = this.bucket[index].makeArray();
+    const result = indexArray.find((item)=>(item && item.key===key));
+    if(result){
+      return result;
+    }else{
+      return;
+    }
+  }
+  remove(key){
+    const details = this.get(key);
+    const index = this.hash(key);
+    const linkedListIndex = this.bucket[index].indexOf(details);
+    this.bucket[index].deleteIndex(linkedListIndex);
+    return;
+  }
+}
+
 class Node {
   constructor(data, next = null) {
     (this.data = data), (this.next = next);
@@ -134,28 +193,16 @@ class LinkedList {
   }
 
 }
-
-const n1 = new Node(100);
-const ll1 = new LinkedList();
-ll1.insertFirst(200);
-ll1.insertFirst(400);
-ll1.insertFirst(600);
-ll1.insertLast(23);
+const miki = new HashTable(1);
+miki.put(250,"Ogala");
 
 
-ll1.indexOf(23);
-
-ll1.printListData();
-// ll1.deleteIndex(3);
-
-
-console.log(ll1.indexOf(23));
-
-
-console.log(n1);
-console.log(ll1);
+miki.put(250,"michael")
+console.log(miki.get(250));
+// miki.remove(250);
+console.log(miki);
 
 
 
-
+;
 

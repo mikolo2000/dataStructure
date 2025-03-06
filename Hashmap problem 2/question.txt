@@ -1,0 +1,13 @@
+question: 2- Given an array of integers, count the number of unique pairs of
+integers that have difference k.
+Input: [1, 7, 5, 9, 2, 12, 3] K=2
+Output: 4
+We have four pairs with difference 2: (1, 3), (3, 5), (5, 7), (7, 9). Note
+that we only want the number of these pairs, not the pairs themselves.
+
+solution: in the function i decleared a variable count and set it to zero
+          then i looped through the given array. while looping i set another 
+          array, filtered, to be equal to the array but excluding the present 
+          value in the loop . the i increase the value of count by one if 
+          the current element - any of the elements in the filtered array is
+          equal to k. 

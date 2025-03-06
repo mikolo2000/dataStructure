@@ -1,0 +1,17 @@
+question 1: Source :-Code with mosh
+create an a custom array class and add the following methods
+1)  insert
+2) removeat
+3) indexOf
+
+
+
+solution;
+
+i created a class named Arrray that inputs an initial size 
+
+1) in building the insert() method i used array.push method to insert items into my array 
+2) in building the removeAt() method. the method receives an index.  i used the array.splice(index,1)
+    to delete item in that index
+3) in building the indexOf method. the method receives a value . i use the findindex method to get 
+the index and return it.

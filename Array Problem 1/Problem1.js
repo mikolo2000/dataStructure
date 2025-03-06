@@ -6,8 +6,8 @@ console.log( "max is",Math.max(...array))
 
 
 class Arrray {
-  constructor( ){
-    this.array= []
+  constructor(size){
+    this.array= new Array(size);
     // return this.array;
   }
 
@@ -26,7 +26,7 @@ class Arrray {
 
   indexOf(value){
    const index = this.array.findIndex((element)=>(element===value));
-   console.log(index);
+   return index;
   }
 
   print() {
@@ -35,32 +35,7 @@ class Arrray {
     }
   }
 
-  // add a new method 
-  max() {
-    const max = this.array.reduce((a,b)=>{
-      if(a>b){
-        return a;
-      }else{
-        return b;
-      }
-    })
-    console.log("the Maximum of the numbers in the array is ",max);
-  }
-
-  intersect (arr){
-    const result = [];
-    arr.forEach(num => {
-      const found = this.array.find(e => (num === e));
-      if (num === found)
-        result.push(num)
-    });
-    console.log(result);
-    
-  }
-
-  reverse () {
-    this.array.sort((a,b)=> b-a);
-  }
+  
 }
 
 const games = new Arrray();
@@ -74,10 +49,7 @@ games.indexOf(500);
 games.print();
 games.max();
 console.log(games);
-games.reverse();
+
 console.log(games);
-games.intersect([9,20,3,5]);
 
-// const strings = [1, 2];
 
-// console.log(strings);
