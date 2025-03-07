@@ -1,0 +1,19 @@
+question:
+ Implement the MyCircularQueue class:
+
+MyCircularQueue(k) Initializes the object with the size of the queue to be k.
+int Front() Gets the front item from the queue. If the queue is empty, return -1.
+int Rear() Gets the last item from the queue. If the queue is empty, return -1.
+boolean enQueue(int value) Inserts an element into the circular queue. Return true if the operation is successful.
+boolean deQueue() Deletes an element from the circular queue. Return true if the operation is successful.
+boolean isEmpty() Checks whether the circular queue is empty or not.
+boolean isFull() Checks whether the circular queue is full or not.
+You must solve the problem without using the built-in queue data structure in your programming language. 
+
+
+
+
+solution: 
+I first built the MyCircularQueue constructor, which initializes an array of size k filled with null. The constructor also defines three key properties: count to track the number of elements, endPosition to track the next insertion index, and headPosition to manage the front of the queue. The enQueue method was then implemented to insert elements, checking first if the queue is full before adding a value. The method properly updates endPosition, ensuring it wraps around when reaching the end of the array, maintaining the circular nature of the queue.The count is updated accordingly after each insertion.
+
+Next, I implemented the deQueue function to remove elements from the front of the queue. It first checks if the queue is empty and then removes an element by setting it to null. The headPosition is incremented while ensuring it wraps around when reaching the end of the array. The Front and Rear methods were added to return the front and rear elements respectively, or -1 if the queue is empty. The isEmpty and isFull methods provide quick status checks on whether the queue is completely empty or full. 
