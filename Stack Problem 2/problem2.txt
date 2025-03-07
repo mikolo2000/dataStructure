@@ -1,0 +1,17 @@
+Design a stack that supports push, pop and retrieving the minimum
+value in constant time.
+For example, we populate our stack with [5, 2, 10, 1] (from left to right).
+stack.min() // 1
+stack.pop()
+stack.min() // 2
+
+
+solution:   To implement a stack that supports push, pop, and retrieving the minimum value in constant time, I first 
+            structured the class with two arrays: stack and minStack. The stack stores all the elements in the order 
+            they are pushed, while minStack keeps track of the minimum values. Whenever a new number is pushed, it 
+            is added to both stacks, and minStack is sorted to ensure the smallest element is always at index 0. I 
+            included input validation in the push() method to ensure only numbers. The pop() method removes the top 
+            element from stack and also filters it out from minStack, ensuring that the minimum values remain accurate 
+            after deletion.
+
+            I designed the min() function to always return the first element of minStack, which is the smallest due to the sorting mechanism.
