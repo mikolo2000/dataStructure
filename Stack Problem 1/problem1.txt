@@ -1,0 +1,7 @@
+question: check if the arithmatic expression is balanced 
+source: code with mosh:
+
+
+solution : To implement the balanceExpression function,  I designed a Stack class using a linked list with push, pop, and peek methods to manage bracket operations efficiently. Next, I defined a function that converts the input string into an array of characters and checks each character to determine whether it is an opening or closing bracket. I also created two helper functions, checkSpecialIndex1 and checkSpecialIndex2, to find the position of a character in the predefined specialCharacters array, which contains valid bracket pairs. 
+
+i used the for loop to iterates through the string, pushing opening brackets onto the stack and checking closing brackets against the top of the stack. If a mismatch occurs, the function immediately returns false, ensuring early termination for invalid cases. At the end of the iteration, if the stack is empty, the function returns true, indicating a balanced expression; otherwise, it returns false. 
