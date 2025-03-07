@@ -23,7 +23,7 @@ class HashTable{
   put(key, value){
     let index = this.hash(key);
     const array = this.bucket[index].makeArray();
-    const existed = array.find(e=> e.key===key);
+    const existed = array.find(e=>e && e.key===key);
     const linkedListIndex = this.bucket[index].indexOf(existed);
     let current= this.bucket[index]
     

@@ -1,0 +1,36 @@
+question 2: Create a binary search tree class and implement the following methods
+1) add
+2)findMin
+3)findMax
+4)isPresent
+
+
+
+
+solution: to build the BST class i first build a node class with three main components (data, left and right). 
+          then i built the BST class with the main components as the root.
+
+
+          the add methods takes in an integer so i built a validate function to check if the arguments to be passed into 
+          the method is valid. i created a function called searching() that takes two arguments tree and data. this 
+          function is a recursive function.
+          it checks if data is less that the tree.data. if it is, it checks if tree.left is empty, if it is it places the
+          data there with a new node else it moves to tree.left and search again. if the data is greater than the trees.data 
+          it checks if tree.right is empty, if it is, it places the data there with a new node. if it is not empty it moves 
+          to tree.right and continue searching.
+          the add function check if the tree is empty . if it is , it put the data there as a new node. if not it uses the searching
+          function to place the data.
+
+
+
+2)        findMin():- in building this method in the BST a value is always greater than those on its left . so i looped 
+          to the leftmost element and return it value as the minimum;
+
+3)        findMax():- in building this method in the BST a value is always less than those on its right . so i looped 
+          to the rightmost element and return it value as the maximum;
+
+4)        isPresent(data):- this method takes an argument, data. i created a variable current and set it as the current root 
+          i used a while loop to loop through the tree. if the given data is equal to the current data i return true if the 
+          data is less than the current data i move to the left branch on the tree else if it greater than the current data 
+          i move to the right. if the loop runs out and the data is not found i return false.
+
